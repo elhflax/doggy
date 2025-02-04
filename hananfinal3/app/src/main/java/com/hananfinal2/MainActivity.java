@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         feedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "feedButton", Toast.LENGTH_SHORT).show();
 
                 // Replace the current fragment with KitchenFragment
                 KitchenFragment kitchenFragment = new KitchenFragment();
@@ -75,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "playButton", Toast.LENGTH_SHORT).show();
 
                 // Perform the play action on the pet
                 if (pet != null) {
@@ -91,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
         sleepButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "sleepButton", Toast.LENGTH_SHORT).show();
 
                 if (pet != null) {
                     if (!pet.getSleeping()) {
@@ -119,11 +116,11 @@ public class MainActivity extends AppCompatActivity {
         updateUI();
 
         // Add DogFragment dynamically
-        if (savedInstanceState == null) {
+        //if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new DogFragment()) // Add DogFragment to the container
                     .commit();
-        }
+        //}
     }
 
     private void startAutoDecrement() {
