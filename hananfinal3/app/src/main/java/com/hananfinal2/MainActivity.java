@@ -10,6 +10,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
                         .commit();
 
                 // Retrieve the food input from KitchenFragment
-                String foodInput = kitchenFragment.getFoodInput();
-                Toast.makeText(context, "Food Input: " + foodInput, Toast.LENGTH_SHORT).show();
+                //String foodInput = kitchenFragment.getFoodInput();
+                //Toast.makeText(context, "Food Input: " + foodInput, Toast.LENGTH_SHORT).show();
 
                 // Perform the feed action on the pet
                 if (pet != null) {
@@ -74,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                replaceFragment(new DogFragment());
 
                 // Perform the play action on the pet
                 if (pet != null) {
@@ -154,6 +157,17 @@ public class MainActivity extends AppCompatActivity {
             energyMeter.setProgress(pet.getEnergy());
         }
     }
+    private void replaceFragment(Fragment newFragment) {
+        Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.fragment_container);
+
+        if (currentFragment == null || !currentFragment.getClass().equals(newFragment.getClass())) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, newFragment);
+            transaction.addToBackStack(null);  // Optional: add to back stack to allow navigation back
+            transaction.commit();
+        }
+    }
+
 
     private void Buttons(boolean bool) {
         feedButton.setEnabled(bool);
