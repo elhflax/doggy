@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -26,7 +27,8 @@ public class KitchenFragment extends Fragment {
         HorizontalScrollView horizontalScrollView = view.findViewById(R.id.horizonticalScrollView);
 
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
-            final ImageView imageView = (ImageView) linearLayout.getChildAt(i);
+            final FrameLayout frameLayout = (FrameLayout) linearLayout.getChildAt(i);
+            final ImageView imageView = (ImageView) frameLayout.getChildAt(0);
 
             imageView.setOnTouchListener(new View.OnTouchListener() {
                 @Override
