@@ -56,8 +56,8 @@ public class KitchenFragment extends Fragment {
                                 case MotionEvent.ACTION_DOWN:
                                     horizontalScrollView.requestDisallowInterceptTouchEvent(true);
 
-                                    originalX = event.getRawX() - imageView.getWidth() / 2;
-                                    originalY = event.getRawY() - imageView.getHeight() / 2 - heightDifference;
+                                    originalX = event.getRawX();
+                                    originalY = event.getRawY() - 100;
                                     frameLayout.removeView(imageView);
                                     rootLayout.addView(imageView);
 
@@ -67,8 +67,8 @@ public class KitchenFragment extends Fragment {
 
                                 case MotionEvent.ACTION_MOVE:
                                     imageView.animate()
-                                            .x(event.getRawX() - imageView.getWidth() / 2)
-                                            .y(event.getRawY() - imageView.getHeight() / 2 + heightDifference)
+                                            .x(event.getRawX())
+                                            .y(event.getRawY() - imageView.getHeight() / 2)
                                             .setDuration(0)
                                             .start();
                                     break;
@@ -83,7 +83,10 @@ public class KitchenFragment extends Fragment {
                                             .setDuration(300)
                                             .withEndAction(() -> {
                                                 rootLayout.removeView(imageView);
-                                                frameLayout.addView(imageView, 0);
+                                                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
+                                                        FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+                                                layoutParams.gravity = Gravity.CENTER;
+                                                frameLayout.addView(imageView, 0, layoutParams);
                                                 imageView.setX(0);
                                                 imageView.setY(0);
                                             })
