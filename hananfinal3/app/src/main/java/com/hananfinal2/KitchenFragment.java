@@ -48,47 +48,43 @@ public class KitchenFragment extends Fragment {
                     final FrameLayout frameLayout = (FrameLayout) linearLayout.getChildAt(i);
                     final ImageView imageView = (ImageView) frameLayout.getChildAt(0);
                     final View rect = (View) frameLayout.getChildAt(1);
+                    int[] rootLocation = new int[2];
+                    rootLayout.getLocationOnScreen(rootLocation);
 
                     rect.setOnTouchListener(new View.OnTouchListener() {
                         @Override
                         public boolean onTouch(View v, MotionEvent event) {
                             switch (event.getAction()) {
-                                case MotionEvent.ACTION_DOWN:
+                                case MotionEvent.ACTION_DOWN: // לחיצה
                                     horizontalScrollView.requestDisallowInterceptTouchEvent(true);
 
-                                    originalX = event.getRawX();
-                                    originalY = event.getRawY() - 100;
+                                    originalX = frameLayout.getX();
+                                    originalY = frameLayout.getY() - rootLocation[1];
                                     frameLayout.removeView(imageView);
                                     rootLayout.addView(imageView);
-
-                                    imageView.setX(originalX);
-                                    imageView.setY(originalY);
+                                    imageView.setX(event.getRawX() - imageView.getWidth() / 2 );
+                                    imageView.setY(event.getRawY() - imageView.getHeight() / 2 - rootLocation[1]);
                                     break;
 
-                                case MotionEvent.ACTION_MOVE:
+                                case MotionEvent.ACTION_MOVE: //הזזה
                                     imageView.animate()
                                             .x(event.getRawX())
-                                            .y(event.getRawY() - imageView.getHeight() / 2)
+                                            .y(event.getRawY() - imageView.getHeight() / 2 - rootLocation[1])
                                             .setDuration(0)
                                             .start();
                                     break;
 
-                                case MotionEvent.ACTION_UP:
+                                case MotionEvent.ACTION_UP: // עזיבה
                                     horizontalScrollView.requestDisallowInterceptTouchEvent(false);
 
 
                                     imageView.animate()
                                             .x(originalX)
-                                            .y(originalY)
+                                            .y(originalY - imageView.getHeight() / 2)
                                             .setDuration(300)
                                             .withEndAction(() -> {
                                                 rootLayout.removeView(imageView);
-                                                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
-                                                        FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-                                                layoutParams.gravity = Gravity.CENTER;
-                                                frameLayout.addView(imageView, 0, layoutParams);
-                                                imageView.setX(0);
-                                                imageView.setY(0);
+                                                frameLayout.addView(imageView, 0);
                                             })
                                             .start();
                                     break;

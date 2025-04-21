@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+import android.widget.ViewAnimator;
+import android.view.ViewGroup;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView feedButton, playButton, sleepButton;
     protected boolean onScreen = true;
     protected ConstraintLayout constraintLayout;
+    protected View fragmentContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
         context = this; // Use the activity context
 
-        // Find the buttons and set click listeners
         feedButton = findViewById(R.id.feed_button);
         playButton = findViewById(R.id.play_button);
         sleepButton = findViewById(R.id.sleep_button);
@@ -45,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
         happinessMeter = findViewById(R.id.happiness_meter);
         energyMeter = findViewById(R.id.energy_meter);
         constraintLayout = findViewById(R.id.constraintLayout);
+        fragmentContainer = findViewById(R.id.fragment_container);
+
+        ViewGroup.LayoutParams params = fragmentContainer.getLayoutParams();
+        params.height = constraintLayout.getHeight() - hungerMeter.getHeight();
+        fragmentContainer.setLayoutParams(params);
 
         // Set click listeners for feed button
         feedButton.setOnClickListener(new View.OnClickListener() {
