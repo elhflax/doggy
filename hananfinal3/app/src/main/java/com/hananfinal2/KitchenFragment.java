@@ -2,6 +2,7 @@ package com.hananfinal2;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -48,8 +49,10 @@ public class KitchenFragment extends Fragment {
                     final FrameLayout frameLayout = (FrameLayout) linearLayout.getChildAt(i);
                     final ImageView imageView = (ImageView) frameLayout.getChildAt(0);
                     final View rect = (View) frameLayout.getChildAt(1);
+
                     int[] rootLocation = new int[2];
                     rootLayout.getLocationOnScreen(rootLocation);
+                    ViewGroup decorView = (ViewGroup) getActivity().getWindow().getDecorView();
 
                     rect.setOnTouchListener(new View.OnTouchListener() {
                         @Override
@@ -58,36 +61,50 @@ public class KitchenFragment extends Fragment {
                                 case MotionEvent.ACTION_DOWN: // לחיצה
                                     horizontalScrollView.requestDisallowInterceptTouchEvent(true);
 
-                                    originalX = frameLayout.getX();
-                                    originalY = frameLayout.getY() - rootLocation[1];
-                                    frameLayout.removeView(imageView);
-                                    rootLayout.addView(imageView);
-                                    imageView.setX(event.getRawX() - imageView.getWidth() / 2 );
-                                    imageView.setY(event.getRawY() - imageView.getHeight() / 2 - rootLocation[1]);
+                                    int[] imagePos = new int[2];
+                                    imageView.getLocationOnScreen(imagePos);
+
+                                    originalX = imagePos[0] ;
+                                    originalY = imagePos[1] ;
+                                    Log.d("DEBUG", "BEFORE Image X/Y on screen: " + imagePos[0] + ", " + imagePos[1]);
+                                    if (imageView.getParent() != null && imageView.getParent() != decorView) {
+                                        ((ViewGroup) imageView.getParent()).removeView(imageView);
+                                        decorView.addView(imageView);
+                                    }
+                                    Log.d("DEBUG", " AFTER Image X/Y on screen: " + imagePos[0] + ", " + imagePos[1]);
+                                    int[] decorLocation = new int[2];
+                                    decorView.getLocationOnScreen(decorLocation);
+                                    imageView.setX(originalX);
+                                    imageView.setY(originalY);
                                     break;
 
                                 case MotionEvent.ACTION_MOVE: //הזזה
                                     imageView.animate()
-                                            .x(event.getRawX())
-                                            .y(event.getRawY() - imageView.getHeight() / 2 - rootLocation[1])
+                                            .x(event.getRawX() - imageView.getWidth() / 2)
+                                            .y(event.getRawY() - imageView.getHeight() / 2)
                                             .setDuration(0)
                                             .start();
                                     break;
 
                                 case MotionEvent.ACTION_UP: // עזיבה
                                     horizontalScrollView.requestDisallowInterceptTouchEvent(false);
-
-
                                     imageView.animate()
                                             .x(originalX)
-                                            .y(originalY - imageView.getHeight() / 2)
+                                            .y(originalY)
                                             .setDuration(300)
                                             .withEndAction(() -> {
-                                                rootLayout.removeView(imageView);
-                                                frameLayout.addView(imageView, 0);
+                                                // Remove from rootLayout and return to frameLayout
+                                                if (imageView.getParent() != null) {
+                                                    ((ViewGroup) imageView.getParent()).removeView(imageView);
+                                                }
+                                                imageView.setTranslationX(0);
+                                                imageView.setTranslationY(0);
+                                                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(imageView.getWidth(),imageView.getHeight());
+                                                params.gravity = Gravity.CENTER;
+
+                                                frameLayout.addView(imageView, 0, params);
                                             })
                                             .start();
-                                    break;
 
                                 default:
                                     return false;
