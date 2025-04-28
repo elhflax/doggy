@@ -11,9 +11,9 @@ public class Pet implements Serializable {
     private static final int MIN_HAPPINESS = 0;
     private static final int MIN_ENERGY = 0;
 
-    private int hunger;
-    private int happiness;
-    private int energy;
+    private float hunger;
+    private float happiness;
+    private float energy;
     private boolean sleeping;
 
     public Pet() {
@@ -24,37 +24,37 @@ public class Pet implements Serializable {
     }
 
     public void decrement() {
-        if (hunger > MIN_HUNGER) hunger -= 5;
-        if (happiness > MIN_HAPPINESS) happiness -= 3;
-        if (energy > MIN_ENERGY) energy -= 3;
-        else energy = MIN_ENERGY; // Ensure energy doesn't go negative
+        if (hunger > MIN_HUNGER) hunger -= 0.2;
+        if (happiness > MIN_HAPPINESS) happiness -= 0.2;
+        if (energy > MIN_ENERGY) energy -= 0.2;
+        else energy = MIN_ENERGY;
     }
 
     public void feed() {
         if (hunger < MAX_HUNGER - 20) hunger += 20;
-        else hunger = MAX_HUNGER;  // Cap hunger at 100
+        else hunger = MAX_HUNGER;
     }
 
     public void play() {
         if (happiness < MAX_HAPPINESS - 20) happiness += 20;
-        else happiness = MAX_HAPPINESS;  // Cap happiness at 100
+        else happiness = MAX_HAPPINESS;
     }
 
     public void sleep() {
         if (energy < MAX_ENERGY - 25) energy += 25;
-        else energy = MAX_ENERGY;  // Cap energy at 100
+        else energy = MAX_ENERGY;
     }
 
     // Getters
-    public int getHunger() {
+    public float getHunger() {
         return hunger;
     }
 
-    public int getHappiness() {
+    public float getHappiness() {
         return happiness;
     }
 
-    public int getEnergy() {
+    public float getEnergy() {
         return energy;
     }
 

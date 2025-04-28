@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // Initialize the pet if it doesn't exist
         if (PetManager.getInstance().getPet() == null) {
             pet = new Pet();
             PetManager.getInstance().setPet(pet);
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             pet = PetManager.getInstance().getPet();
         }
 
-        context = this; // Use the activity context
+        context = this;
 
         feedButton = findViewById(R.id.feed_button);
         playButton = findViewById(R.id.play_button);
@@ -54,89 +52,71 @@ public class MainActivity extends AppCompatActivity {
         params.height = constraintLayout.getHeight() - hungerMeter.getHeight();
         fragmentContainer.setLayoutParams(params);
 
-        // Set click listeners for feed button
         feedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                replaceFragment(new KitchenFragment());
 
-                // Replace the current fragment with KitchenFragment
-                KitchenFragment kitchenFragment = new KitchenFragment();
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, kitchenFragment)
-                        .addToBackStack(null) // Add to back stack if you want the user to navigate back
-                        .commit();
-
-                // Retrieve the food input from KitchenFragment
-                //String foodInput = kitchenFragment.getFoodInput();
-                //Toast.makeText(context, "Food Input: " + foodInput, Toast.LENGTH_SHORT).show();
-
-                // Perform the feed action on the pet
                 if (pet != null) {
-                    pet.feed();
-                    updateUI();  // Update the UI to reflect changes (e.g., happiness, energy)
+                    updateUI();
                 } else {
                     Toast.makeText(context, "Pet is not available", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        // Set click listeners for play button
+
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 replaceFragment(new DogFragment());
 
-                // Perform the play action on the pet
+
                 if (pet != null) {
                     pet.play();
-                    updateUI();  // Update the UI to reflect changes (e.g., happiness, energy)
+                    updateUI();
                 } else {
                     Toast.makeText(context, "Pet is not available", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        // Set click listeners for sleep button
         sleepButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if (pet != null) {
                     if (!pet.getSleeping()) {
-                        // If pet is not sleeping, set it to sleeping
                         pet.setSleeping(true);
-                        constraintLayout.setBackgroundColor(Color.DKGRAY); // Change background to indicate sleep
-                        Buttons(false);  // Disable buttons while pet is sleeping
+                        constraintLayout.setBackgroundColor(Color.DKGRAY);
+                        Buttons(false);
                     } else {
-                        // If pet is already sleeping, wake it up
+
                         pet.setSleeping(false);
                         constraintLayout.setBackgroundColor(getResources().getColor(R.color.bakcgroundlightgreen));
-                        Buttons(true);  // Enable buttons again
+                        Buttons(true);
                     }
 
-                    // Always update the UI to reflect changes
+
                     updateUI();
                 } else {
-                    Toast.makeText(context, "Pet is not available", Toast.LENGTH_SHORT).show(); // Pet is null
+                    Toast.makeText(context, "Pet is not available", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        // Start the auto-decrement process for pet stats
         startAutoDecrement();
         updateUI();
 
-        // Add DogFragment dynamically
-        //if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, new DogFragment()) // Add DogFragment to the container
+                    .replace(R.id.fragment_container, new DogFragment())
                     .commit();
-        //}
+
     }
 
     private void startAutoDecrement() {
         if (pet == null) {
-            // Initialize the pet object if it's not already initialized
+
             pet = new Pet();
             PetManager.getInstance().setPet(pet);
         }
@@ -151,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                     pet.sleep();
                 }
                 updateUI();
-                handler.postDelayed(this, 2000); // Repeat every 2 seconds
+                handler.postDelayed(this, 100);
             }
         };
 
@@ -160,9 +140,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateUI() {
         if (pet != null) {
-            hungerMeter.setProgress(pet.getHunger());
-            happinessMeter.setProgress(pet.getHappiness());
-            energyMeter.setProgress(pet.getEnergy());
+            hungerMeter.setProgress((int)pet.getHunger());
+            happinessMeter.setProgress((int)pet.getHappiness());
+            energyMeter.setProgress((int)pet.getEnergy());
         }
     }
     private void replaceFragment(Fragment newFragment) {
@@ -171,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         if (currentFragment == null || !currentFragment.getClass().equals(newFragment.getClass())) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragment_container, newFragment);
-            transaction.addToBackStack(null);  // Optional: add to back stack to allow navigation back
+            transaction.addToBackStack(null);
             transaction.commit();
         }
     }

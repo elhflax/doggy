@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.util.DisplayMetrics;
+import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
@@ -27,6 +28,7 @@ public class KitchenFragment extends Fragment {
     private float dX, dY;
     private float originalX, originalY;
     private FrameLayout rootLayout;
+    protected Pet pet;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class KitchenFragment extends Fragment {
         LinearLayout linearLayout = view.findViewById(R.id.linearlayout);
         HorizontalScrollView horizontalScrollView = view.findViewById(R.id.horizonticalScrollView);
         rootLayout = view.findViewById(R.id.kitchenlayout);
+
+        pet = PetManager.getInstance().getPet();
 
         WindowManager windowManager = (WindowManager) getActivity().getSystemService(Context.WINDOW_SERVICE);
         Display display = windowManager.getDefaultDisplay();
@@ -88,6 +92,25 @@ public class KitchenFragment extends Fragment {
 
                                 case MotionEvent.ACTION_UP: // עזיבה
                                     horizontalScrollView.requestDisallowInterceptTouchEvent(false);
+                                    View dropPoint = rootLayout.findViewById(R.id.dropPoint);
+                                    int[] dropLocation = new int[2];
+                                    dropPoint.getLocationOnScreen(dropLocation);
+                                    int dropX = dropLocation[0];
+                                    int dropY = dropLocation[1];
+                                    int dropWidth = dropPoint.getWidth();
+                                    int dropHeight = dropPoint.getHeight();
+
+                                    float droppedX = event.getRawX();
+                                    float droppedY = event.getRawY();
+
+                                    boolean isInDropZone =
+                                            droppedX >= dropX && droppedX <= dropX + dropWidth &&
+                                                    droppedY >= dropY && droppedY <= dropY + dropHeight;
+
+                                    if (isInDropZone) {
+                                        pet.feed();
+                                    }
+                                    else{
                                     imageView.animate()
                                             .x(originalX)
                                             .y(originalY)
@@ -104,7 +127,7 @@ public class KitchenFragment extends Fragment {
 
                                                 frameLayout.addView(imageView, 0, params);
                                             })
-                                            .start();
+                                            .start();}
 
                                 default:
                                     return false;

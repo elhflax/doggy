@@ -9,6 +9,14 @@
 
     <!-- HorizontalScrollView to make the images scrollable horizontally -->
 
+    <View
+        android:id="@+id/dropPoint"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:background="#FA8787" />
+
     <HorizontalScrollView
         android:id="@+id/horizonticalScrollView"
         android:layout_width="match_parent"
