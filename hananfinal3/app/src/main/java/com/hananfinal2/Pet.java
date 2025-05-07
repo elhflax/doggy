@@ -24,24 +24,24 @@ public class Pet implements Serializable {
     }
 
     public void decrement() {
-        if (hunger > MIN_HUNGER) hunger -= 0.2;
-        if (happiness > MIN_HAPPINESS) happiness -= 0.2;
-        if (energy > MIN_ENERGY) energy -= 0.2;
+        if (hunger > MIN_HUNGER) hunger -= 0.05;
+        if (happiness > MIN_HAPPINESS) happiness -= 0.1;
+        if (energy > MIN_ENERGY) energy -= 0.01;
         else energy = MIN_ENERGY;
     }
 
-    public void feed() {
-        if (hunger < MAX_HUNGER - 20) hunger += 20;
+    public void feed(float num) {
+        if (hunger < MAX_HUNGER - num) hunger += num;
         else hunger = MAX_HUNGER;
     }
 
-    public void play() {
-        if (happiness < MAX_HAPPINESS - 20) happiness += 20;
+    public void play(float num) {
+        if (happiness < MAX_HAPPINESS - num) happiness += num;
         else happiness = MAX_HAPPINESS;
     }
 
-    public void sleep() {
-        if (energy < MAX_ENERGY - 25) energy += 25;
+    public void sleep(float num) {
+        if (energy < MAX_ENERGY - num) energy += num;
         else energy = MAX_ENERGY;
     }
 
@@ -66,8 +66,4 @@ public class Pet implements Serializable {
         this.sleeping = sleeping;
     }
 
-    // Check if the pet is unhappy
-    public boolean isUnhappy() {
-        return hunger == MIN_HUNGER || happiness == MIN_HAPPINESS || energy == MIN_ENERGY;
-    }
 }

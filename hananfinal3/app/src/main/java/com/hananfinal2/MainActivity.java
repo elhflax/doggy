@@ -71,13 +71,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 replaceFragment(new DogFragment());
 
-
-                if (pet != null) {
-                    pet.play();
-                    updateUI();
-                } else {
-                    Toast.makeText(context, "Pet is not available", Toast.LENGTH_SHORT).show();
-                }
             }
         });
 
@@ -128,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!pet.getSleeping()) {
                     pet.decrement();
                 } else {
-                    pet.sleep();
+                    pet.sleep(0.05f);
                 }
                 updateUI();
                 handler.postDelayed(this, 100);
@@ -136,6 +129,19 @@ public class MainActivity extends AppCompatActivity {
         };
 
         handler.post(runnable);
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(!pet.getSleeping()){
+        AlarmHelper.scheduleAlarm(
+                this,
+                500,
+                "\uD83D\uDCA4",
+                "Oops! Looks like you forgot to put your puppy to sleep.",
+                101,
+                false
+        );}
     }
 
     private void updateUI() {
@@ -155,10 +161,9 @@ public class MainActivity extends AppCompatActivity {
             transaction.commit();
         }
     }
-
-
     private void Buttons(boolean bool) {
         feedButton.setEnabled(bool);
         playButton.setEnabled(bool);
     }
+
 }

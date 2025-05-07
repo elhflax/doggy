@@ -119,7 +119,7 @@ public class KitchenFragment extends Fragment {
                                                     droppedY >= dropY && droppedY <= dropY + dropHeight;
 
                                     if (isInDropZone) {
-                                        pet.feed();
+                                        pet.feed(10);
                                     }
                                     imageView.animate()
                                             .x(originalX)
