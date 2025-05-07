@@ -24,7 +24,7 @@ public class DogFragment extends Fragment {
 
         // Set the animation drawable if dogImageView is not null
         if (dogImageView != null) {
-            dogImageView.setImageResource(R.drawable.dog_animation);
+            dogImageView.setImageResource(R.drawable.dog1_idle);
         }
 
         return view;

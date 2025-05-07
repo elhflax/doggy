@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.hananfinal2.app-mergeDebugResources-42:/layout/activity_main.xml",
+        "source": "com.hananfinal2.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\fragment_dog.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\fragment_dog.xml"
+    },
+    {
+        "merged": "com.hananfinal2.app-mergeDebugResources-42:/layout/fragment_kitchen.xml",
+        "source": "com.hananfinal2.app-main-45:/layout/fragment_kitchen.xml"
+    },
+    {
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\fragment_kitchen.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\fragment_kitchen.xml"
+    }
+]
