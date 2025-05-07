@@ -38,8 +38,7 @@
 
             <FrameLayout
                 android:layout_width="100dp"
-                android:layout_height="200dp"
-                android:background="#55FF0000">
+                android:layout_height="200dp">
 
                 <!-- Rectangle (Draggable Area) -->
                 <ImageView

@@ -4,6 +4,7 @@ package com.hananfinal2.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
@@ -22,9 +23,14 @@ public final class FragmentDogBinding implements ViewBinding {
   @NonNull
   public final ImageView homeDog;
 
-  private FragmentDogBinding(@NonNull FrameLayout rootView, @NonNull ImageView homeDog) {
+  @NonNull
+  public final Button playGamesButton;
+
+  private FragmentDogBinding(@NonNull FrameLayout rootView, @NonNull ImageView homeDog,
+      @NonNull Button playGamesButton) {
     this.rootView = rootView;
     this.homeDog = homeDog;
+    this.playGamesButton = playGamesButton;
   }
 
   @Override
@@ -60,7 +66,13 @@ public final class FragmentDogBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDogBinding((FrameLayout) rootView, homeDog);
+      id = R.id.play_games_button;
+      Button playGamesButton = ViewBindings.findChildViewById(rootView, id);
+      if (playGamesButton == null) {
+        break missingId;
+      }
+
+      return new FragmentDogBinding((FrameLayout) rootView, homeDog, playGamesButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

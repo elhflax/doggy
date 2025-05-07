@@ -3528,6 +3528,9 @@ id fragment_container
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id game1_button
+id game2_button
+id game3_button
 id ghost_view
 id ghost_view_holder
 id gone
@@ -3698,6 +3701,7 @@ id peekHeight
 id percent
 id pin
 id play_button
+id play_games_button
 id position
 id postLayout
 id pressed
@@ -3986,6 +3990,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_dog
+layout fragment_game_selection
 layout fragment_kitchen
 layout fragment_sleep
 layout ime_base_split_test_activity

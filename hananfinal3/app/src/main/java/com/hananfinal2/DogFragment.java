@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 public class DogFragment extends Fragment {
 
@@ -25,6 +27,15 @@ public class DogFragment extends Fragment {
             dogImageView.setImageResource(R.drawable.dog1_idle);
             dogAnimation = (AnimationDrawable) dogImageView.getDrawable();
         }
+
+        Button playGamesButton = view.findViewById(R.id.play_games_button);
+        playGamesButton.setOnClickListener(v -> {
+            GameSelectionFragment gameSelectionFragment = new GameSelectionFragment();
+            FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, gameSelectionFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        });
 
         return view;
     }

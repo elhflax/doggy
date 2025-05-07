@@ -16,36 +16,40 @@
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog4_run5.png"
     },
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog3_sit2.png.flat",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog3_sit2.png"
-    },
-    {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog2_sit0.png.flat",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog2_sit0.png"
     },
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog2_sleep4.png.flat",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog2_sleep4.png"
-    },
-    {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog1_sleep0.png.flat",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog1_sleep0.png"
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog3_sit2.png.flat",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog3_sit2.png"
     },
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\xml\\data_extraction_rules.xml"
     },
     {
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog1_sleep0.png.flat",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog1_sleep0.png"
+    },
+    {
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog2_sleep4.png.flat",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog2_sleep4.png"
+    },
+    {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog1_walk3.png.flat",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog1_walk3.png"
     },
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog3_idle5.png.flat",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog3_idle5.png"
+        "merged": "com.hananfinal2.app-merged_res-43:/layout_fragment_game_selection.xml.flat",
+        "source": "com.hananfinal2.app-main-45:/layout/fragment_game_selection.xml"
     },
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog4_idle.xml.flat",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog4_idle.xml"
+    },
+    {
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog3_idle5.png.flat",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog3_idle5.png"
     },
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog2_run1.png.flat",
@@ -54,6 +58,10 @@
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\drawable_dog1_run6.png.flat",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\drawable\\dog1_run6.png"
+    },
+    {
+        "merged": "com.hananfinal2.app-merged_res-43:/layout_fragment_dog.xml.flat",
+        "source": "com.hananfinal2.app-main-45:/layout/fragment_dog.xml"
     },
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-43:\\mipmap-hdpi_ic_launcher_round.webp.flat",
