@@ -16,6 +16,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.firebase.FirebaseApp;
+
 public class MainActivity extends AppCompatActivity {
 
     protected Context context;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FirebaseApp.initializeApp(this);
         if (PetManager.getInstance().getPet() == null) {
             pet = new Pet();
             PetManager.getInstance().setPet(pet);
@@ -136,12 +139,20 @@ public class MainActivity extends AppCompatActivity {
         if(!pet.getSleeping()){
         AlarmHelper.scheduleAlarm(
                 this,
-                500,
+                5000,
                 "\uD83D\uDCA4",
                 "Oops! Looks like you forgot to put your puppy to sleep.",
                 101,
                 false
         );}
+        AlarmHelper.scheduleAlarm(
+                this,
+                10000,
+                "stat decrease",
+                "every 2 hours",
+                404,
+                true
+        );
     }
 
     private void updateUI() {
