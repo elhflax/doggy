@@ -3058,6 +3058,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable cherry
+drawable circular_progress
 drawable coconut
 drawable design_fab_background
 drawable design_ic_visibility
@@ -3210,6 +3211,7 @@ drawable dog4_walk2
 drawable dog4_walk3
 drawable food
 drawable happiness
+drawable heart
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3303,6 +3305,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable paw
 drawable progress_bar_custom
 drawable sleep
 drawable test_level_drawable
@@ -3502,6 +3505,7 @@ id elastic
 id embed
 id end
 id endToStart
+id end_container
 id energy_meter
 id enterAlways
 id enterAlwaysCollapsed
@@ -3515,6 +3519,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id final_score
 id fitCenter
 id fitEnd
 id fitStart
@@ -3541,6 +3546,10 @@ id grouping
 id groups
 id happiness_meter
 id header_title
+id heart1
+id heart2
+id heart3
+id hearts_container
 id hide_ime_id
 id hideable
 id home
@@ -3711,6 +3720,7 @@ id radio
 id ratio
 id rectangles
 id report_drawn
+id restart_button
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3723,6 +3733,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id score_text
 id screen
 id scroll
 id scrollIndicatorDown
@@ -3798,6 +3809,10 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id target_container
+id target_paw
+id target_timer
+id target_timer_text
 id text
 id text2
 id textEnd
@@ -3989,6 +4004,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_click_game
 layout fragment_dog
 layout fragment_game_selection
 layout fragment_kitchen

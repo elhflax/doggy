@@ -3057,6 +3057,7 @@ int drawable btn_radio_off_to_on_mtrl_animation 0x7f070082
 int drawable btn_radio_on_mtrl 0x7f070083
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f070084
 int drawable cherry 0x7f070085
+int drawable circular_progress 0x7f070186
 int drawable coconut 0x7f070086
 int drawable design_fab_background 0x7f070087
 int drawable design_ic_visibility 0x7f070088
@@ -3209,6 +3210,7 @@ int drawable dog4_walk2 0x7f070184
 int drawable dog4_walk3 0x7f070185
 int drawable food 0x7f070091
 int drawable happiness 0x7f070092
+int drawable heart 0x7f070188
 int drawable ic_arrow_back_black_24 0x7f070093
 int drawable ic_call_answer 0x7f070094
 int drawable ic_call_answer_low 0x7f070095
@@ -3302,6 +3304,7 @@ int drawable notification_template_icon_bg 0x7f0700ec
 int drawable notification_template_icon_low_bg 0x7f0700ed
 int drawable notification_tile_bg 0x7f0700ee
 int drawable notify_panel_notification_icon_bg 0x7f0700ef
+int drawable paw 0x7f070187
 int drawable progress_bar_custom 0x7f0700f0
 int drawable sleep 0x7f0700f1
 int drawable test_level_drawable 0x7f0700f2
@@ -3501,6 +3504,7 @@ int id elastic 0x7f0800bd
 int id embed 0x7f0800be
 int id end 0x7f0800bf
 int id endToStart 0x7f0800c0
+int id end_container 0x7f080234
 int id energy_meter 0x7f0800c1
 int id enterAlways 0x7f0800c2
 int id enterAlwaysCollapsed 0x7f0800c3
@@ -3514,6 +3518,7 @@ int id fill 0x7f0800ca
 int id fill_horizontal 0x7f0800cb
 int id fill_vertical 0x7f0800cc
 int id filled 0x7f0800cd
+int id final_score 0x7f080235
 int id fitCenter 0x7f0800ce
 int id fitEnd 0x7f0800cf
 int id fitStart 0x7f0800d0
@@ -3540,6 +3545,10 @@ int id grouping 0x7f0800e1
 int id groups 0x7f0800e2
 int id happiness_meter 0x7f0800e3
 int id header_title 0x7f0800e4
+int id heart1 0x7f080230
+int id heart2 0x7f080231
+int id heart3 0x7f080232
+int id hearts_container 0x7f080233
 int id hide_ime_id 0x7f0800e5
 int id hideable 0x7f0800e6
 int id home 0x7f0800e7
@@ -3710,6 +3719,7 @@ int id radio 0x7f080188
 int id ratio 0x7f080189
 int id rectangles 0x7f08018a
 int id report_drawn 0x7f08018b
+int id restart_button 0x7f080236
 int id reverseSawtooth 0x7f08018c
 int id right 0x7f08018d
 int id rightToLeft 0x7f08018e
@@ -3722,6 +3732,7 @@ int id save_non_transition_alpha 0x7f080194
 int id save_overlay_view 0x7f080195
 int id sawtooth 0x7f080196
 int id scale 0x7f080197
+int id score_text 0x7f080228
 int id screen 0x7f080198
 int id scroll 0x7f080199
 int id scrollIndicatorDown 0x7f08019a
@@ -3797,6 +3808,10 @@ int id tag_transition_group 0x7f0801de
 int id tag_unhandled_key_event_manager 0x7f0801df
 int id tag_unhandled_key_listeners 0x7f0801e0
 int id tag_window_insets_animation_callback 0x7f0801e1
+int id target_container 0x7f08022c
+int id target_paw 0x7f08022e
+int id target_timer 0x7f08022d
+int id target_timer_text 0x7f08022f
 int id text 0x7f0801e2
 int id text2 0x7f0801e3
 int id textEnd 0x7f0801e4
@@ -3988,6 +4003,7 @@ int layout design_navigation_menu 0x7f0b0029
 int layout design_navigation_menu_item 0x7f0b002a
 int layout design_text_input_end_icon 0x7f0b002b
 int layout design_text_input_start_icon 0x7f0b002c
+int layout fragment_click_game 0x7f0b0071
 int layout fragment_dog 0x7f0b002d
 int layout fragment_game_selection 0x7f0b006f
 int layout fragment_kitchen 0x7f0b002e
