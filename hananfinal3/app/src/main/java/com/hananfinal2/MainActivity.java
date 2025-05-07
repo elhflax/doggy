@@ -90,14 +90,14 @@ public class MainActivity extends AppCompatActivity {
                         pet.setSleeping(true);
                         constraintLayout.setBackgroundColor(Color.DKGRAY);
                         Buttons(false);
+                        replaceFragment(new SleepFragment());
                     } else {
 
                         pet.setSleeping(false);
                         constraintLayout.setBackgroundColor(getResources().getColor(R.color.bakcgroundlightgreen));
                         Buttons(true);
+                        replaceFragment(new DogFragment());
                     }
-
-
                     updateUI();
                 } else {
                     Toast.makeText(context, "Pet is not available", Toast.LENGTH_SHORT).show();

@@ -1,46 +1,40 @@
 package com.hananfinal2;
 
 import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class DogFragment extends Fragment {
 
     private ImageView dogImageView;
+    private AnimationDrawable dogAnimation;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_dog, container, false);
+        dogImageView = view.findViewById(R.id.home_dog);
 
-        // Find the ImageView for the dog
-        dogImageView = view.findViewById(R.id.dog_image);
-
-        // Set the animation drawable if dogImageView is not null
         if (dogImageView != null) {
             dogImageView.setImageResource(R.drawable.dog1_idle);
+            dogAnimation = (AnimationDrawable) dogImageView.getDrawable();
         }
 
         return view;
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        // Check if the ImageView and the drawable are not null
-        if (dogImageView != null) {
-            Drawable drawable = dogImageView.getDrawable();
-            if (drawable instanceof AnimationDrawable) {
-                AnimationDrawable animation = (AnimationDrawable) drawable;
-                animation.start();
-            }
+        if (dogAnimation != null && !dogAnimation.isRunning()) {
+            dogAnimation.start();
         }
     }
 
@@ -48,13 +42,8 @@ public class DogFragment extends Fragment {
     public void onStop() {
         super.onStop();
 
-        // Stop the animation when the fragment is no longer visible
-        if (dogImageView != null) {
-            Drawable drawable = dogImageView.getDrawable();
-            if (drawable instanceof AnimationDrawable) {
-                AnimationDrawable animation = (AnimationDrawable) drawable;
-                animation.stop();
-            }
+        if (dogAnimation != null && dogAnimation.isRunning()) {
+            dogAnimation.stop();
         }
     }
 }

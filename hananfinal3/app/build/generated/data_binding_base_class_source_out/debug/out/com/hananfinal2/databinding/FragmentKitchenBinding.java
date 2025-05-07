@@ -58,6 +58,9 @@ public final class FragmentKitchenBinding implements ViewBinding {
   public final ImageView imageView8;
 
   @NonNull
+  public final ImageView kitchenDog;
+
+  @NonNull
   public final FrameLayout kitchenlayout;
 
   @NonNull
@@ -68,8 +71,8 @@ public final class FragmentKitchenBinding implements ViewBinding {
       @NonNull View dragRectangle5, @NonNull View dropPoint,
       @NonNull HorizontalScrollView horizonticalScrollView, @NonNull ImageView imageView4,
       @NonNull ImageView imageView5, @NonNull ImageView imageView6, @NonNull ImageView imageView7,
-      @NonNull ImageView imageView8, @NonNull FrameLayout kitchenlayout,
-      @NonNull LinearLayout linearlayout) {
+      @NonNull ImageView imageView8, @NonNull ImageView kitchenDog,
+      @NonNull FrameLayout kitchenlayout, @NonNull LinearLayout linearlayout) {
     this.rootView = rootView;
     this.dragRectangle1 = dragRectangle1;
     this.dragRectangle2 = dragRectangle2;
@@ -83,6 +86,7 @@ public final class FragmentKitchenBinding implements ViewBinding {
     this.imageView6 = imageView6;
     this.imageView7 = imageView7;
     this.imageView8 = imageView8;
+    this.kitchenDog = kitchenDog;
     this.kitchenlayout = kitchenlayout;
     this.linearlayout = linearlayout;
   }
@@ -186,6 +190,12 @@ public final class FragmentKitchenBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.kitchen_dog;
+      ImageView kitchenDog = ViewBindings.findChildViewById(rootView, id);
+      if (kitchenDog == null) {
+        break missingId;
+      }
+
       FrameLayout kitchenlayout = (FrameLayout) rootView;
 
       id = R.id.linearlayout;
@@ -196,7 +206,8 @@ public final class FragmentKitchenBinding implements ViewBinding {
 
       return new FragmentKitchenBinding((FrameLayout) rootView, dragRectangle1, dragRectangle2,
           dragRectangle3, dragRectangle4, dragRectangle5, dropPoint, horizonticalScrollView,
-          imageView4, imageView5, imageView6, imageView7, imageView8, kitchenlayout, linearlayout);
+          imageView4, imageView5, imageView6, imageView7, imageView8, kitchenDog, kitchenlayout,
+          linearlayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

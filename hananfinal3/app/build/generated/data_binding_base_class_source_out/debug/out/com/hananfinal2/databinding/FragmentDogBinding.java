@@ -4,10 +4,10 @@ package com.hananfinal2.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.hananfinal2.R;
@@ -17,19 +17,19 @@ import java.lang.String;
 
 public final class FragmentDogBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final FrameLayout rootView;
 
   @NonNull
-  public final ImageView dogImage;
+  public final ImageView homeDog;
 
-  private FragmentDogBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView dogImage) {
+  private FragmentDogBinding(@NonNull FrameLayout rootView, @NonNull ImageView homeDog) {
     this.rootView = rootView;
-    this.dogImage = dogImage;
+    this.homeDog = homeDog;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -54,13 +54,13 @@ public final class FragmentDogBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.dog_image;
-      ImageView dogImage = ViewBindings.findChildViewById(rootView, id);
-      if (dogImage == null) {
+      id = R.id.home_dog;
+      ImageView homeDog = ViewBindings.findChildViewById(rootView, id);
+      if (homeDog == null) {
         break missingId;
       }
 
-      return new FragmentDogBinding((ConstraintLayout) rootView, dogImage);
+      return new FragmentDogBinding((FrameLayout) rootView, homeDog);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

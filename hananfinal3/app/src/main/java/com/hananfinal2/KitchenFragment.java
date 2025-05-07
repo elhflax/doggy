@@ -1,6 +1,7 @@
 package com.hananfinal2;
 
 import android.content.Context;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
@@ -20,6 +21,8 @@ import android.widget.ScrollView;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -29,6 +32,9 @@ public class KitchenFragment extends Fragment {
     private float originalX, originalY;
     private FrameLayout rootLayout;
     protected Pet pet;
+
+    private ImageView dogImageView;
+    private AnimationDrawable dogAnimation;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -44,6 +50,11 @@ public class KitchenFragment extends Fragment {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         display.getMetrics(displayMetrics);
         int screenHeight = displayMetrics.heightPixels;
+
+        dogImageView = view.findViewById(R.id.kitchen_dog);
+        dogImageView.setImageResource(R.drawable.dog1_sit);
+        dogAnimation = (AnimationDrawable) dogImageView.getDrawable();
+
         view.post(new Runnable() {
             @Override
             public void run() {
@@ -110,7 +121,6 @@ public class KitchenFragment extends Fragment {
                                     if (isInDropZone) {
                                         pet.feed();
                                     }
-                                    else{
                                     imageView.animate()
                                             .x(originalX)
                                             .y(originalY)
@@ -127,7 +137,7 @@ public class KitchenFragment extends Fragment {
 
                                                 frameLayout.addView(imageView, 0, params);
                                             })
-                                            .start();}
+                                            .start();
 
                                 default:
                                     return false;
@@ -140,6 +150,23 @@ public class KitchenFragment extends Fragment {
             }
         });
         return view;
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        if (dogAnimation != null && !dogAnimation.isRunning()) {
+            dogAnimation.start();
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        if (dogAnimation != null && dogAnimation.isRunning()) {
+            dogAnimation.stop();
+        }
     }
 
 }

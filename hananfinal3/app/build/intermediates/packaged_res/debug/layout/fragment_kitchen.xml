@@ -11,11 +11,15 @@
 
     <View
         android:id="@+id/dropPoint"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="150dp"
-        android:background="#FA8787" />
+        android:layout_width="200dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/kitchen_dog"
+        android:layout_width="230dp"
+        android:layout_height="278dp"
+        android:layout_gravity="center" />
 
     <HorizontalScrollView
         android:id="@+id/horizonticalScrollView"
