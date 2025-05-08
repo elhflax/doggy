@@ -22,9 +22,10 @@ public class DogFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dog, container, false);
         dogImageView = view.findViewById(R.id.home_dog);
-
+        String dogType = PetManager.getInstance().getPet().getDogType();
         if (dogImageView != null) {
-            dogImageView.setImageResource(R.drawable.dog1_idle);
+            int animationResId = getResources().getIdentifier(dogType + "_idle", "drawable", requireContext().getPackageName());
+            dogImageView.setImageResource(animationResId);
             dogAnimation = (AnimationDrawable) dogImageView.getDrawable();
         }
 

@@ -52,8 +52,13 @@ public class KitchenFragment extends Fragment {
         int screenHeight = displayMetrics.heightPixels;
 
         dogImageView = view.findViewById(R.id.kitchen_dog);
-        dogImageView.setImageResource(R.drawable.dog1_sit);
-        dogAnimation = (AnimationDrawable) dogImageView.getDrawable();
+        String dogType = PetManager.getInstance().getPet().getDogType();
+        if (dogImageView != null) {
+            int animationResId = getResources().getIdentifier(dogType + "_sit", "drawable", requireContext().getPackageName());
+            dogImageView.setImageResource(animationResId);
+            dogAnimation = (AnimationDrawable) dogImageView.getDrawable();
+        }
+
 
         view.post(new Runnable() {
             @Override

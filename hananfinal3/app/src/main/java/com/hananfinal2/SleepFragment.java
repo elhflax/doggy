@@ -19,9 +19,10 @@ public class SleepFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sleep, container, false);
         dogImageView = view.findViewById(R.id.sleep_dog);
-
+        String dogType = PetManager.getInstance().getPet().getDogType();
         if (dogImageView != null) {
-            dogImageView.setImageResource(R.drawable.dog1_sleep);
+            int animationResId = getResources().getIdentifier(dogType + "_sleep", "drawable", requireContext().getPackageName());
+            dogImageView.setImageResource(animationResId);
             dogAnimation = (AnimationDrawable) dogImageView.getDrawable();
         }
 
