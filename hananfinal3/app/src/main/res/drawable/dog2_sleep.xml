@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/dog2_sleep0" android:duration="100" />
+    <item android:drawable="@drawable/dog2_sleep1" android:duration="100" />
+    <item android:drawable="@drawable/dog2_sleep2" android:duration="100" />
+    <item android:drawable="@drawable/dog2_sleep3" android:duration="100" />
+    <item android:drawable="@drawable/dog2_sleep4" android:duration="100" />
+    <item android:drawable="@drawable/dog2_sleep5" android:duration="100" />
+    <item android:drawable="@drawable/dog2_sleep6" android:duration="100" />
+    <item android:drawable="@drawable/dog2_sleep7" android:duration="100" />
+    <item android:drawable="@drawable/dog2_sleep8" android:duration="100" />
+
+</animation-list>

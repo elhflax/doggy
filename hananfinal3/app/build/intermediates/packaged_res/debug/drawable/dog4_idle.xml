@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/dog4_idle0" android:duration="100" />
+    <item android:drawable="@drawable/dog4_idle1" android:duration="100" />
+    <item android:drawable="@drawable/dog4_idle2" android:duration="100" />
+    <item android:drawable="@drawable/dog4_idle3" android:duration="100" />
+    <item android:drawable="@drawable/dog4_idle4" android:duration="100" />
+    <item android:drawable="@drawable/dog4_idle5" android:duration="100" />
+    <item android:drawable="@drawable/dog4_idle6" android:duration="100" />
+    <item android:drawable="@drawable/dog4_idle7" android:duration="100" />
+
+</animation-list>

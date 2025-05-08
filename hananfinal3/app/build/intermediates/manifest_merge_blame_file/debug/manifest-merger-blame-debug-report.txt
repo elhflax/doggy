@@ -5,150 +5,307 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="27"
+8        android:minSdkVersion="34"
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 11-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:5:5-77
 11-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:5:22-74
-12
-13    <permission
-13-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\534c383d262480fc9777e4b4200ab380\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
-14        android:name="com.hananfinal2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\534c383d262480fc9777e4b4200ab380\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
-15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\534c383d262480fc9777e4b4200ab380\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
-16
-17    <uses-permission android:name="com.hananfinal2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\534c383d262480fc9777e4b4200ab380\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\534c383d262480fc9777e4b4200ab380\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
-18
-19    <application
-19-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:6:5-26:19
-20        android:allowBackup="true"
-20-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:7:9-35
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\534c383d262480fc9777e4b4200ab380\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
-22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:8:9-65
-23        android:debuggable="true"
-24        android:extractNativeLibs="false"
-25        android:fullBackupContent="@xml/backup_rules"
-25-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:9:9-54
-26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:10:9-43
-27        android:label="@string/app_name"
-27-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:11:9-41
-28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:12:9-54
-29        android:supportsRtl="true"
-29-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:13:9-35
-30        android:testOnly="true"
-31        android:theme="@style/Theme.AppCompat" >
-31-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:14:9-47
-32        <receiver
-32-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:16:9-75
-33            android:name="com.hananfinal2.AlarmReceiver"
-33-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:16:19-48
-34            android:exported="true" />
-34-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:16:49-72
-35
-36        <activity
-36-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:17:9-25:20
-37            android:name="com.hananfinal2.MainActivity"
-37-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:18:13-41
-38            android:exported="true" >
-38-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:19:13-36
-39            <intent-filter>
-39-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:20:13-24:29
-40                <action android:name="android.intent.action.MAIN" />
-40-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:21:17-69
-40-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:21:25-66
-41
-42                <category android:name="android.intent.category.LAUNCHER" />
-42-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:23:17-77
-42-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:23:27-74
-43            </intent-filter>
-44        </activity>
-45
-46        <provider
-46-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8d476b42e787f12a4680f56c077b5280\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-47            android:name="androidx.startup.InitializationProvider"
-47-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8d476b42e787f12a4680f56c077b5280\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
-48            android:authorities="com.hananfinal2.androidx-startup"
-48-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8d476b42e787f12a4680f56c077b5280\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
-49            android:exported="false" >
-49-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8d476b42e787f12a4680f56c077b5280\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
-50            <meta-data
-50-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8d476b42e787f12a4680f56c077b5280\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-51-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8d476b42e787f12a4680f56c077b5280\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
-52                android:value="androidx.startup" />
-52-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8d476b42e787f12a4680f56c077b5280\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
-53            <meta-data
-53-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\elhanan\.gradle\caches\transforms-3\4e17b877c450cc229629c5899291d2ad\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-54-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\elhanan\.gradle\caches\transforms-3\4e17b877c450cc229629c5899291d2ad\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-55                android:value="androidx.startup" />
-55-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\elhanan\.gradle\caches\transforms-3\4e17b877c450cc229629c5899291d2ad\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-56            <meta-data
-56-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
-57                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-57-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
-58                android:value="androidx.startup" />
-58-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
-59        </provider>
-60
-61        <uses-library
-61-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\e7df8934e011e2c130da4d68dd931488\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
-62            android:name="androidx.window.extensions"
-62-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\e7df8934e011e2c130da4d68dd931488\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
-63            android:required="false" />
-63-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\e7df8934e011e2c130da4d68dd931488\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
-64        <uses-library
-64-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\e7df8934e011e2c130da4d68dd931488\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
-65            android:name="androidx.window.sidecar"
-65-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\e7df8934e011e2c130da4d68dd931488\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
-66            android:required="false" />
-66-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\e7df8934e011e2c130da4d68dd931488\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
-67
-68        <receiver
-68-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
-69            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-69-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
-70            android:directBootAware="false"
-70-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
-71            android:enabled="true"
-71-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+12    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+12-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:6:5-7:47
+12-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.USE_EXACT_ALARM " />
+13-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:8:5-74
+13-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:8:22-72
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+14-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+15-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:22-76
+16    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+16-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\b4ab3a4f8d16fc8ff6a2c4040c438d7c\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+16-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\b4ab3a4f8d16fc8ff6a2c4040c438d7c\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+17
+18    <permission
+18-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\730e066c3eeda5785d3e82018ce096b2\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+19        android:name="com.hananfinal2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+19-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\730e066c3eeda5785d3e82018ce096b2\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+20        android:protectionLevel="signature" />
+20-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\730e066c3eeda5785d3e82018ce096b2\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+21
+22    <uses-permission android:name="com.hananfinal2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+22-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\730e066c3eeda5785d3e82018ce096b2\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+22-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\730e066c3eeda5785d3e82018ce096b2\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+23
+24    <application
+24-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:9:5-30:19
+25        android:allowBackup="true"
+25-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:10:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.13.0] C:\Users\elhanan\.gradle\caches\transforms-3\730e066c3eeda5785d3e82018ce096b2\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+27        android:dataExtractionRules="@xml/data_extraction_rules"
+27-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:11:9-65
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:fullBackupContent="@xml/backup_rules"
+30-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:12:9-54
+31        android:icon="@mipmap/ic_launcher"
+31-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:13:9-43
+32        android:label="@string/app_name"
+32-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:14:9-41
+33        android:roundIcon="@mipmap/ic_launcher_round"
+33-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:15:9-54
+34        android:supportsRtl="true"
+34-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:16:9-35
+35        android:testOnly="true"
+36        android:theme="@style/Theme.AppCompat" >
+36-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:17:9-47
+37        <receiver
+37-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:19:9-75
+38            android:name="com.hananfinal2.AlarmReceiver"
+38-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:19:19-48
+39            android:exported="true" />
+39-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:19:49-72
+40
+41        <activity
+41-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:20:9-28:20
+42            android:name="com.hananfinal2.MainActivity"
+42-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:21:13-41
+43            android:exported="true" >
+43-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:22:13-36
+44            <intent-filter>
+44-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:23:13-27:29
+45                <action android:name="android.intent.action.MAIN" />
+45-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:24:17-69
+45-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:24:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:26:17-77
+47-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:26:27-74
+48            </intent-filter>
+49        </activity>
+50        <activity android:name="com.hananfinal2.PetHomeActivity" />
+50-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:29:9-53
+50-->C:\Users\elhanan\StudioProjects\doggy\hananfinal3\app\src\main\AndroidManifest.xml:29:19-50
+51        <activity
+51-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+52            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+52-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+53            android:excludeFromRecents="true"
+53-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+54            android:exported="true"
+54-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+55            android:launchMode="singleTask"
+55-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+56            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+56-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+57            <intent-filter>
+57-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+58                <action android:name="android.intent.action.VIEW" />
+58-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+58-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+59
+60                <category android:name="android.intent.category.DEFAULT" />
+60-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+60-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+61                <category android:name="android.intent.category.BROWSABLE" />
+61-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+61-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+62
+63                <data
+63-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+64                    android:host="firebase.auth"
+64-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+65                    android:path="/"
+65-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+66                    android:scheme="genericidp" />
+66-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+67            </intent-filter>
+68        </activity>
+69        <activity
+69-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+70            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+70-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+71            android:excludeFromRecents="true"
+71-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
 72            android:exported="true"
-72-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
-73            android:permission="android.permission.DUMP" >
-73-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
-74            <intent-filter>
-74-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
-75                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-75-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-75-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
-76            </intent-filter>
-77            <intent-filter>
-77-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
-78                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-78-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-78-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
-79            </intent-filter>
-80            <intent-filter>
-80-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
-81                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-81-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-81-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
-82            </intent-filter>
-83            <intent-filter>
-83-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
-84                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-84-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\4f35275336f29ba89f78cc98a9c96fd4\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+72-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+73            android:launchMode="singleTask"
+73-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+74            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+74-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+75            <intent-filter>
+75-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+76                <action android:name="android.intent.action.VIEW" />
+76-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+76-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+77
+78                <category android:name="android.intent.category.DEFAULT" />
+78-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+78-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+79                <category android:name="android.intent.category.BROWSABLE" />
+79-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+79-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+80
+81                <data
+81-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+82                    android:host="firebase.auth"
+82-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+83                    android:path="/"
+83-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+84                    android:scheme="recaptcha" />
+84-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
 85            </intent-filter>
-86        </receiver>
-87    </application>
-88
-89</manifest>
+86        </activity>
+87
+88        <service
+88-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
+89            android:name="com.google.firebase.components.ComponentDiscoveryService"
+89-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:67:13-84
+90            android:directBootAware="true"
+90-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+91            android:exported="false" >
+91-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:68:13-37
+92            <meta-data
+92-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+93                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+93-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+94                android:value="com.google.firebase.components.ComponentRegistrar" />
+94-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\elhanan\.gradle\caches\transforms-3\03cbfd4d75c993ea1073b22823bac48a\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+95            <meta-data
+95-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\elhanan\.gradle\caches\transforms-3\31ff37adaf373813dd3288b311f8f9f5\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:17:13-19:85
+96                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+96-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\elhanan\.gradle\caches\transforms-3\31ff37adaf373813dd3288b311f8f9f5\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:18:17-122
+97                android:value="com.google.firebase.components.ComponentRegistrar" />
+97-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\elhanan\.gradle\caches\transforms-3\31ff37adaf373813dd3288b311f8f9f5\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:19:17-82
+98            <meta-data
+98-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\elhanan\.gradle\caches\transforms-3\31ff37adaf373813dd3288b311f8f9f5\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:20:13-22:85
+99                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+99-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\elhanan\.gradle\caches\transforms-3\31ff37adaf373813dd3288b311f8f9f5\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:21:17-111
+100                android:value="com.google.firebase.components.ComponentRegistrar" />
+100-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\elhanan\.gradle\caches\transforms-3\31ff37adaf373813dd3288b311f8f9f5\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:22:17-82
+101            <meta-data
+101-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\a9161e8e7a302df685112b0a56118e12\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+102                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+102-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\a9161e8e7a302df685112b0a56118e12\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+103                android:value="com.google.firebase.components.ComponentRegistrar" />
+103-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\a9161e8e7a302df685112b0a56118e12\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+104            <meta-data
+104-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+105                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+105-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+107        </service>
+108
+109        <provider
+109-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+110            android:name="com.google.firebase.provider.FirebaseInitProvider"
+110-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+111            android:authorities="com.hananfinal2.firebaseinitprovider"
+111-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+112            android:directBootAware="true"
+112-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+113            android:exported="false"
+113-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+114            android:initOrder="100" />
+114-->[com.google.firebase:firebase-common:20.4.2] C:\Users\elhanan\.gradle\caches\transforms-3\b92b1f584281de19aefa7c1170d9d55c\transformed\firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+115
+116        <activity
+116-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\elhanan\.gradle\caches\transforms-3\b307ab153a377bc0dbbee793e53b6759\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+117            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+117-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\elhanan\.gradle\caches\transforms-3\b307ab153a377bc0dbbee793e53b6759\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+118            android:exported="false"
+118-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\elhanan\.gradle\caches\transforms-3\b307ab153a377bc0dbbee793e53b6759\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+119            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+119-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\elhanan\.gradle\caches\transforms-3\b307ab153a377bc0dbbee793e53b6759\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+120
+121        <uses-library
+121-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\a593c68c6eba83a23c659c1caa41b97f\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+122            android:name="androidx.window.extensions"
+122-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\a593c68c6eba83a23c659c1caa41b97f\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+123            android:required="false" />
+123-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\a593c68c6eba83a23c659c1caa41b97f\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+124        <uses-library
+124-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\a593c68c6eba83a23c659c1caa41b97f\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+125            android:name="androidx.window.sidecar"
+125-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\a593c68c6eba83a23c659c1caa41b97f\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+126            android:required="false" />
+126-->[androidx.window:window:1.0.0] C:\Users\elhanan\.gradle\caches\transforms-3\a593c68c6eba83a23c659c1caa41b97f\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+127
+128        <provider
+128-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8ef0adaa3adf6a370d7b5f8acec1e96f\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+129            android:name="androidx.startup.InitializationProvider"
+129-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8ef0adaa3adf6a370d7b5f8acec1e96f\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+130            android:authorities="com.hananfinal2.androidx-startup"
+130-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8ef0adaa3adf6a370d7b5f8acec1e96f\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+131            android:exported="false" >
+131-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8ef0adaa3adf6a370d7b5f8acec1e96f\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+132            <meta-data
+132-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8ef0adaa3adf6a370d7b5f8acec1e96f\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+133                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+133-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8ef0adaa3adf6a370d7b5f8acec1e96f\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+134                android:value="androidx.startup" />
+134-->[androidx.emoji2:emoji2:1.3.0] C:\Users\elhanan\.gradle\caches\transforms-3\8ef0adaa3adf6a370d7b5f8acec1e96f\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+135            <meta-data
+135-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\elhanan\.gradle\caches\transforms-3\e3a6aa41691643461cd7acb067dbf6a9\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+136                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+136-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\elhanan\.gradle\caches\transforms-3\e3a6aa41691643461cd7acb067dbf6a9\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+137                android:value="androidx.startup" />
+137-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\elhanan\.gradle\caches\transforms-3\e3a6aa41691643461cd7acb067dbf6a9\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+138            <meta-data
+138-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+139                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+139-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+140                android:value="androidx.startup" />
+140-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+141        </provider>
+142
+143        <meta-data
+143-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\elhanan\.gradle\caches\transforms-3\6987b51028246a23d18904134e71c2d5\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+144            android:name="com.google.android.gms.version"
+144-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\elhanan\.gradle\caches\transforms-3\6987b51028246a23d18904134e71c2d5\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+145            android:value="@integer/google_play_services_version" />
+145-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\elhanan\.gradle\caches\transforms-3\6987b51028246a23d18904134e71c2d5\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+146
+147        <receiver
+147-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+148            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+148-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+149            android:directBootAware="false"
+149-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+150            android:enabled="true"
+150-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+151            android:exported="true"
+151-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+152            android:permission="android.permission.DUMP" >
+152-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+153            <intent-filter>
+153-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+154                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+154-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+154-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+155            </intent-filter>
+156            <intent-filter>
+156-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+157                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+157-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+157-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+158            </intent-filter>
+159            <intent-filter>
+159-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+160                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+160-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+160-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+161            </intent-filter>
+162            <intent-filter>
+162-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+163                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+163-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+163-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\elhanan\.gradle\caches\transforms-3\55aca102b12dc91d97c7ecc38f788394\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+164            </intent-filter>
+165        </receiver>
+166    </application>
+167
+168</manifest>

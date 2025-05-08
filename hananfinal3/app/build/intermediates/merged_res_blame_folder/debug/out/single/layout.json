@@ -1,34 +1,42 @@
 [
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\fragment_game_selection.xml",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\fragment_game_selection.xml"
+        "merged": "com.hananfinal2.app-mergeDebugResources-47:/layout/fragment_register.xml",
+        "source": "com.hananfinal2.app-main-50:/layout/fragment_register.xml"
     },
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\fragment_click_game.xml",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\fragment_click_game.xml"
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.hananfinal2.app-mergeDebugResources-42:/layout/fragment_click_game.xml",
-        "source": "com.hananfinal2.app-main-45:/layout/fragment_click_game.xml"
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\activity_pet_home.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\activity_pet_home.xml"
     },
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\fragment_sleep.xml",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\fragment_sleep.xml"
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\fragment_register.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\fragment_register.xml"
     },
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\fragment_login.xml"
     },
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\fragment_dog.xml",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\fragment_dog.xml"
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\fragment_dog.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\fragment_dog.xml"
     },
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\fragment_catch_ball.xml",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\fragment_catch_ball.xml"
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\fragment_game_selection.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\fragment_game_selection.xml"
     },
     {
-        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-42:\\layout\\fragment_kitchen.xml",
-        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-45:\\layout\\fragment_kitchen.xml"
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\fragment_kitchen.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\fragment_kitchen.xml"
+    },
+    {
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\fragment_sleep.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\fragment_sleep.xml"
+    },
+    {
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\fragment_click_game.xml",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\fragment_click_game.xml"
     }
 ]

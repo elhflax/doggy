@@ -14,13 +14,17 @@ public class Pet implements Serializable {
     private float hunger;
     private float happiness;
     private float energy;
-    private boolean sleeping;
-
+    private boolean sleeping = false;
+    private String dogType;
+    private String name;
     public Pet() {
-        hunger = 50;
-        happiness = 50;
-        energy = 50;
-        sleeping = false;
+    }
+    public Pet(String name, String dogType, int happiness, int hunger, int energy) {
+        this.name = name;
+        this.dogType = dogType;
+        this.happiness = happiness;
+        this.hunger = hunger;
+        this.energy = energy;
     }
 
     public void decrement() {
@@ -61,6 +65,8 @@ public class Pet implements Serializable {
     public boolean getSleeping() {
         return sleeping;
     }
+    public String getDogType(){return dogType;}
+    public String getName(){return name;}
 
     public void setSleeping(boolean sleeping) {
         this.sleeping = sleeping;

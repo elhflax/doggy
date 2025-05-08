@@ -5,6 +5,11 @@
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">hananfinal2</string>
     <string name="first_fragment_label">First Fragment</string>
+    <string name="gcm_defaultSenderId" translatable="false">280352871797</string>
+    <string name="google_api_key" translatable="false">AIzaSyDj6PTrEXfqmOovbszKZyZy-2RKYHVRE0E</string>
+    <string name="google_app_id" translatable="false">1:280352871797:android:58fabddfe229150c6eaf3c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDj6PTrEXfqmOovbszKZyZy-2RKYHVRE0E</string>
+    <string name="google_storage_bucket" translatable="false">school-dog-app.firebasestorage.app</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -44,6 +49,7 @@
     </string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="project_id" translatable="false">school-dog-app</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="title_activity_kitchen">kitchen</string>
 </resources>

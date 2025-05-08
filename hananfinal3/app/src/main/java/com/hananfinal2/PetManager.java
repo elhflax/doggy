@@ -16,9 +16,6 @@ public class PetManager {
     }
 
     public Pet getPet() {
-        if (pet == null) {
-            pet = new Pet(); // Initialize the pet if it's not already created
-        }
         return pet;
     }
 

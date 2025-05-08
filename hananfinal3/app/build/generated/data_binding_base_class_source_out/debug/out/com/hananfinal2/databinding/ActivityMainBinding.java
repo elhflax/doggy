@@ -5,71 +5,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.hananfinal2.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
-import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
-
-  @NonNull
-  public final LinearLayout buttonsContainer;
-
-  @NonNull
-  public final ConstraintLayout constraintLayout;
-
-  @NonNull
-  public final ProgressBar energyMeter;
-
-  @NonNull
-  public final ImageView feedButton;
+  private final FrameLayout rootView;
 
   @NonNull
   public final FrameLayout fragmentContainer;
 
-  @NonNull
-  public final ProgressBar happinessMeter;
-
-  @NonNull
-  public final ProgressBar hungerMeter;
-
-  @NonNull
-  public final ImageView playButton;
-
-  @NonNull
-  public final ImageView sleepButton;
-
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull LinearLayout buttonsContainer, @NonNull ConstraintLayout constraintLayout,
-      @NonNull ProgressBar energyMeter, @NonNull ImageView feedButton,
-      @NonNull FrameLayout fragmentContainer, @NonNull ProgressBar happinessMeter,
-      @NonNull ProgressBar hungerMeter, @NonNull ImageView playButton,
-      @NonNull ImageView sleepButton) {
+  private ActivityMainBinding(@NonNull FrameLayout rootView,
+      @NonNull FrameLayout fragmentContainer) {
     this.rootView = rootView;
-    this.buttonsContainer = buttonsContainer;
-    this.constraintLayout = constraintLayout;
-    this.energyMeter = energyMeter;
-    this.feedButton = feedButton;
     this.fragmentContainer = fragmentContainer;
-    this.happinessMeter = happinessMeter;
-    this.hungerMeter = hungerMeter;
-    this.playButton = playButton;
-    this.sleepButton = sleepButton;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -90,65 +48,12 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public static ActivityMainBinding bind(@NonNull View rootView) {
-    // The body of this method is generated in a way you would not otherwise write.
-    // This is done to optimize the compiled bytecode for size and performance.
-    int id;
-    missingId: {
-      id = R.id.buttons_container;
-      LinearLayout buttonsContainer = ViewBindings.findChildViewById(rootView, id);
-      if (buttonsContainer == null) {
-        break missingId;
-      }
-
-      ConstraintLayout constraintLayout = (ConstraintLayout) rootView;
-
-      id = R.id.energy_meter;
-      ProgressBar energyMeter = ViewBindings.findChildViewById(rootView, id);
-      if (energyMeter == null) {
-        break missingId;
-      }
-
-      id = R.id.feed_button;
-      ImageView feedButton = ViewBindings.findChildViewById(rootView, id);
-      if (feedButton == null) {
-        break missingId;
-      }
-
-      id = R.id.fragment_container;
-      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
-      if (fragmentContainer == null) {
-        break missingId;
-      }
-
-      id = R.id.happiness_meter;
-      ProgressBar happinessMeter = ViewBindings.findChildViewById(rootView, id);
-      if (happinessMeter == null) {
-        break missingId;
-      }
-
-      id = R.id.hunger_meter;
-      ProgressBar hungerMeter = ViewBindings.findChildViewById(rootView, id);
-      if (hungerMeter == null) {
-        break missingId;
-      }
-
-      id = R.id.play_button;
-      ImageView playButton = ViewBindings.findChildViewById(rootView, id);
-      if (playButton == null) {
-        break missingId;
-      }
-
-      id = R.id.sleep_button;
-      ImageView sleepButton = ViewBindings.findChildViewById(rootView, id);
-      if (sleepButton == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((ConstraintLayout) rootView, buttonsContainer,
-          constraintLayout, energyMeter, feedButton, fragmentContainer, happinessMeter, hungerMeter,
-          playButton, sleepButton);
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
     }
-    String missingId = rootView.getResources().getResourceName(id);
-    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
+
+    FrameLayout fragmentContainer = (FrameLayout) rootView;
+
+    return new ActivityMainBinding((FrameLayout) rootView, fragmentContainer);
   }
 }

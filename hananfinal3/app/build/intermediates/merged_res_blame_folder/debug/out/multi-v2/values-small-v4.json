@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.hananfinal2.app-mergeDebugResources-41:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.hananfinal2.app-mergeDebugResources-46:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\elhanan\\.gradle\\caches\\transforms-3\\8f18fd07fdec621747e5bddea48b7c80\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\elhanan\\.gradle\\caches\\transforms-3\\38f4e1192d390f293b391821e2f4cf22\\transformed\\material-1.12.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
