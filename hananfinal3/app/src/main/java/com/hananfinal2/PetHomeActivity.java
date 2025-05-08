@@ -16,6 +16,12 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class PetHomeActivity extends AppCompatActivity {
 
     protected Context context;
@@ -115,7 +121,24 @@ public class PetHomeActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        if (pet != null && !pet.getSleeping()) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+
+        Map<String, Object> petData = new HashMap<>();
+        petData.put("hunger", pet.getHunger());
+        petData.put("happiness", pet.getHappiness());
+        petData.put("energy", pet.getEnergy());
+
+        db.collection("pets")
+            .document(auth.getCurrentUser().getUid())
+            .update(petData)
+            .addOnFailureListener(e -> {
+                db.collection("pets")
+                    .document(auth.getCurrentUser().getUid())
+                    .set(petData);
+            });
+
+        if (!pet.getSleeping()) {
             AlarmHelper.scheduleAlarm(
                     this,
                     5000,
@@ -133,6 +156,7 @@ public class PetHomeActivity extends AppCompatActivity {
                 404,
                 true
         );
+
     }
 
     private void updateUI() {
