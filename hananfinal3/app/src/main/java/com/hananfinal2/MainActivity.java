@@ -1,5 +1,7 @@
 package com.hananfinal2;
 
+import android.app.AlarmManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -29,9 +31,14 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         auth = FirebaseAuth.getInstance();
 
-        Intent intent1 = new Intent();
-        intent1.setAction(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
-        startActivity(intent1);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            if (!alarmManager.canScheduleExactAlarms()) {
+                Intent intent = new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+                startActivity(intent);
+            }
+        }
+
 
         if (auth.getCurrentUser() != null ) {
             fetchPet(auth.getCurrentUser().getUid());

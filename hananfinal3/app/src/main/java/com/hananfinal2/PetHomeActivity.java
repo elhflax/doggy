@@ -119,8 +119,8 @@ public class PetHomeActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onPause() {
+        super.onPause();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
@@ -132,10 +132,13 @@ public class PetHomeActivity extends AppCompatActivity {
         db.collection("pets")
             .document(auth.getCurrentUser().getUid())
             .update(petData)
+            .addOnSuccessListener(aVoid -> {
+                    Log.d("FirestoreUpdate", "Pet data updated successfully");})
             .addOnFailureListener(e -> {
                 db.collection("pets")
                     .document(auth.getCurrentUser().getUid())
                     .set(petData);
+                Log.d("FirestoreUpdate", "Pet data failed!");
             });
 
         if (!pet.getSleeping()) {
