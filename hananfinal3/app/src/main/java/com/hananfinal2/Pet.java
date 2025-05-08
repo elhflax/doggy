@@ -71,5 +71,25 @@ public class Pet implements Serializable {
     public void setSleeping(boolean sleeping) {
         this.sleeping = sleeping;
     }
+    public void setHunger(float hunger) {
+        this.hunger = hunger;
+    }
+
+    public void setHappiness(float happiness) {
+        this.happiness = happiness;
+    }
+
+    public void setEnergy(float energy) {
+        this.energy = energy;
+    }
+
+    public void setDogType(String dogType) {
+        this.dogType = dogType;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
 
 }
