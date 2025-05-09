@@ -81,6 +81,7 @@
                                 petData.put("happiness", 100);
                                 petData.put("hunger", 100);
                                 petData.put("energy", 100);
+                                petData.put("sleeping", false);
 
                                 db.collection("users")
                                     .document(authResult.getUser().getUid())

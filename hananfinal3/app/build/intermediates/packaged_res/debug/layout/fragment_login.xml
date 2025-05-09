@@ -58,10 +58,11 @@
 
     <Button
         android:id="@+id/register_button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Create New Account"
         android:textColor="@color/black"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        android:textSize="15sp" />
 
 </LinearLayout> 

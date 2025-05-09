@@ -18,6 +18,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -94,7 +95,12 @@ public class PetHomeActivity extends AppCompatActivity {
                 }
             }
         });
-        replaceFragment(new DogFragment());
+        if(pet.getSleeping()){
+            constraintLayout.setBackgroundColor(Color.DKGRAY);
+            replaceFragment(new SleepFragment());
+        }
+        else {
+            replaceFragment(new DogFragment());}
         startAutoDecrement();
         updateUI();
     }
@@ -121,6 +127,10 @@ public class PetHomeActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+                .setPersistenceEnabled(true)
+                .build();
+        FirebaseFirestore.getInstance().setFirestoreSettings(settings);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseAuth auth = FirebaseAuth.getInstance();
 
@@ -128,6 +138,7 @@ public class PetHomeActivity extends AppCompatActivity {
         petData.put("hunger", pet.getHunger());
         petData.put("happiness", pet.getHappiness());
         petData.put("energy", pet.getEnergy());
+        petData.put("sleeping", pet.getSleeping());
 
         db.collection("pets")
             .document(auth.getCurrentUser().getUid())
@@ -153,9 +164,9 @@ public class PetHomeActivity extends AppCompatActivity {
         }
         AlarmHelper.scheduleAlarm(
                 this,
-                10000,
+                3600000,
                 "stat decrease",
-                "every 2 hours",
+                "every 1 hour",
                 404,
                 true
         );
