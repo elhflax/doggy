@@ -200,6 +200,10 @@
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\drawable\\dog3.png"
     },
     {
+        "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-48:\\drawable_dog_selection_background.xml.flat",
+        "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\drawable\\dog_selection_background.xml"
+    },
+    {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-48:\\drawable_dog3_idle6.png.flat",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\drawable\\dog3_idle6.png"
     },
@@ -218,10 +222,6 @@
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-48:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "com.hananfinal2.app-merged_res-48:/layout_fragment_dog.xml.flat",
-        "source": "com.hananfinal2.app-main-50:/layout/fragment_dog.xml"
     },
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-48:\\drawable_dog4_idle0.png.flat",
@@ -640,10 +640,6 @@
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\drawable\\dog1_walk2.png"
     },
     {
-        "merged": "com.hananfinal2.app-merged_res-48:/layout_fragment_login.xml.flat",
-        "source": "com.hananfinal2.app-main-50:/layout/fragment_login.xml"
-    },
-    {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-48:\\drawable_dog4_walk2.png.flat",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\drawable\\dog4_walk2.png"
     },
@@ -658,10 +654,6 @@
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-48:\\drawable_dog3_sleep4.png.flat",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\drawable\\dog3_sleep4.png"
-    },
-    {
-        "merged": "com.hananfinal2.app-merged_res-48:/layout_fragment_game_selection.xml.flat",
-        "source": "com.hananfinal2.app-main-50:/layout/fragment_game_selection.xml"
     },
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-merged_res-48:\\drawable_dog2_sit1.png.flat",

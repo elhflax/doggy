@@ -6,6 +6,7 @@
     import android.view.View;
     import android.view.ViewGroup;
     import android.widget.Button;
+    import android.widget.FrameLayout;
     import android.widget.RadioButton;
     import android.widget.RadioGroup;
     import android.widget.Toast;
@@ -42,6 +43,18 @@
 
             auth = FirebaseAuth.getInstance();
             db = FirebaseFirestore.getInstance();
+
+            dogSelectionGroup.setOnCheckedChangeListener((group, checkedId) -> {
+                for (int i = 0; i < group.getChildCount(); i++) {
+                    View child = group.getChildAt(i);
+                    if (child instanceof FrameLayout) {
+                        RadioButton radioButton = (RadioButton) ((FrameLayout) child).getChildAt(0);
+                        if (radioButton.getId() != checkedId) {
+                            radioButton.setChecked(false);
+                        }
+                    }
+                }
+            });
 
             registerButton.setOnClickListener(v -> register());
 

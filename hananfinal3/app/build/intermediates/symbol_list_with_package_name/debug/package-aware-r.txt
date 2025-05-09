@@ -3255,6 +3255,7 @@ drawable dog4_walk0
 drawable dog4_walk1
 drawable dog4_walk2
 drawable dog4_walk3
+drawable dog_selection_background
 drawable food
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18

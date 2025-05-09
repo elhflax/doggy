@@ -3254,6 +3254,7 @@ int drawable dog4_walk0 0x7f070130
 int drawable dog4_walk1 0x7f070131
 int drawable dog4_walk2 0x7f070132
 int drawable dog4_walk3 0x7f070133
+int drawable dog_selection_background 0x7f07019d
 int drawable food 0x7f070134
 int drawable googleg_disabled_color_18 0x7f070135
 int drawable googleg_standard_color_18 0x7f070136

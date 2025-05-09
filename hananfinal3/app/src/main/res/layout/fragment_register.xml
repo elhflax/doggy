@@ -90,7 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:button="@drawable/dog1"
-                android:tag="dog1" />
+                android:tag="dog1"
+                android:background="@drawable/dog_selection_background" />
 
             <RadioButton
                 android:id="@+id/dog2"
@@ -100,7 +101,8 @@
                 android:button="@drawable/dog2"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
-                android:tag="dog2" />
+                android:tag="dog2"
+                android:background="@drawable/dog_selection_background" />
 
             <RadioButton
                 android:id="@+id/dog3"
@@ -108,14 +110,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:button="@drawable/dog3"
-                android:tag="dog3" />
+                android:tag="dog3"
+                android:background="@drawable/dog_selection_background" />
 
             <RadioButton
                 android:id="@+id/dog4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@drawable/dog4"
-                android:tag="dog4" />
+                android:tag="dog4"
+                android:background="@drawable/dog_selection_background" />
         </RadioGroup>
 
         <Button
