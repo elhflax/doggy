@@ -2,6 +2,7 @@
 <resources>
     <color name="bakcgroundlightgreen">#FFF1FFCF</color>
     <color name="black">#FF000000</color>
+    <color name="ic_launcher_background">#B8FF9A</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">hananfinal2</string>
     <string name="first_fragment_label">First Fragment</string>

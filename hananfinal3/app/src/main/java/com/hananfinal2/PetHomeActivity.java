@@ -173,6 +173,12 @@ public class PetHomeActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AlarmHelper.cancelAlarm(this,404);
+    }
+
     private void updateUI() {
         if (pet != null) {
             hungerMeter.setProgress((int)pet.getHunger());

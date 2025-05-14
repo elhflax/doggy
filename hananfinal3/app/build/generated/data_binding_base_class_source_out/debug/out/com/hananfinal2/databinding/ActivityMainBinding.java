@@ -4,30 +4,53 @@ package com.hananfinal2.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.hananfinal2.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final Button btnLogin;
+
+  @NonNull
+  public final Button btnRegister;
 
   @NonNull
   public final FrameLayout fragmentContainer;
 
-  private ActivityMainBinding(@NonNull FrameLayout rootView,
-      @NonNull FrameLayout fragmentContainer) {
+  @NonNull
+  public final ImageView ivLogo;
+
+  @NonNull
+  public final TextView tvTitle;
+
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnLogin,
+      @NonNull Button btnRegister, @NonNull FrameLayout fragmentContainer,
+      @NonNull ImageView ivLogo, @NonNull TextView tvTitle) {
     this.rootView = rootView;
+    this.btnLogin = btnLogin;
+    this.btnRegister = btnRegister;
     this.fragmentContainer = fragmentContainer;
+    this.ivLogo = ivLogo;
+    this.tvTitle = tvTitle;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -48,12 +71,44 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public static ActivityMainBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.btnLogin;
+      Button btnLogin = ViewBindings.findChildViewById(rootView, id);
+      if (btnLogin == null) {
+        break missingId;
+      }
+
+      id = R.id.btnRegister;
+      Button btnRegister = ViewBindings.findChildViewById(rootView, id);
+      if (btnRegister == null) {
+        break missingId;
+      }
+
+      id = R.id.fragment_container;
+      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.ivLogo;
+      ImageView ivLogo = ViewBindings.findChildViewById(rootView, id);
+      if (ivLogo == null) {
+        break missingId;
+      }
+
+      id = R.id.tvTitle;
+      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvTitle == null) {
+        break missingId;
+      }
+
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnLogin, btnRegister,
+          fragmentContainer, ivLogo, tvTitle);
     }
-
-    FrameLayout fragmentContainer = (FrameLayout) rootView;
-
-    return new ActivityMainBinding((FrameLayout) rootView, fragmentContainer);
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

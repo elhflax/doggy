@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 color bakcgroundlightgreen
 color black
+color ic_launcher_background
 color white
 drawable apple
 drawable avocado
@@ -171,6 +172,8 @@ id FirstFragment
 id SecondFragment
 id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
+id btnLogin
+id btnRegister
 id buttons_container
 id constraintLayout
 id dog1
@@ -205,6 +208,7 @@ id imageView5
 id imageView6
 id imageView7
 id imageView8
+id ivLogo
 id kitchen_dog
 id kitchenlayout
 id linearlayout
@@ -223,6 +227,7 @@ id target_container
 id target_paw
 id target_timer
 id target_timer_text
+id tvTitle
 id username_input
 layout activity_main
 layout activity_pet_home
@@ -234,6 +239,7 @@ layout fragment_login
 layout fragment_register
 layout fragment_sleep
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 string app_name

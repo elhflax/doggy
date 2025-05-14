@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.hananfinal2.app-mergeDebugResources-47:/layout/fragment_register.xml",
-        "source": "com.hananfinal2.app-main-50:/layout/fragment_register.xml"
-    },
-    {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\activity_main.xml",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\activity_main.xml"
     },
@@ -18,6 +14,10 @@
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\fragment_login.xml",
         "source": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-main-50:\\layout\\fragment_login.xml"
+    },
+    {
+        "merged": "com.hananfinal2.app-mergeDebugResources-47:/layout/fragment_game_selection.xml",
+        "source": "com.hananfinal2.app-main-50:/layout/fragment_game_selection.xml"
     },
     {
         "merged": "C:\\Users\\elhanan\\.gradle\\daemon\\8.5\\com.hananfinal2.app-mergeDebugResources-47:\\layout\\fragment_dog.xml",

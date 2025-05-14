@@ -6,12 +6,18 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,7 +28,11 @@ import android.provider.Settings;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth auth;
-
+    private ActivityResultLauncher<String> requestPermissionLauncher;
+    private FrameLayout fragmentContainer;
+    private Button btnLogin, btnRegister;
+    private ImageView ivLogo;
+    private TextView tvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +41,36 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         auth = FirebaseAuth.getInstance();
 
+        // Initialize views
+        fragmentContainer = findViewById(R.id.fragment_container);
+        btnLogin = findViewById(R.id.btnLogin);
+        btnRegister = findViewById(R.id.btnRegister);
+        ivLogo = findViewById(R.id.ivLogo);
+        tvTitle = findViewById(R.id.tvTitle);
+
+        // Set click listeners
+        btnLogin.setOnClickListener(v -> {
+            hideWelcomeScreen();
+            showFragment(new LoginFragment());
+        });
+
+        btnRegister.setOnClickListener(v -> {
+            hideWelcomeScreen();
+            showFragment(new RegisterFragment());
+        });
+
+        requestPermissionLauncher = registerForActivityResult(
+                new ActivityResultContracts.RequestPermission(),
+                isGranted -> {
+                    if (!isGranted) {
+                        Toast.makeText(this, "Notification permission is required for pet reminders", Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             if (!alarmManager.canScheduleExactAlarms()) {
@@ -39,12 +79,27 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-
-        if (auth.getCurrentUser() != null ) {
+        // Check if user is already logged in
+        if (auth.getCurrentUser() != null) {
+            hideWelcomeScreen();
             fetchPet(auth.getCurrentUser().getUid());
-        } else {
-            showFragment(new LoginFragment());
         }
+    }
+
+    private void hideWelcomeScreen() {
+        ivLogo.setVisibility(View.GONE);
+        tvTitle.setVisibility(View.GONE);
+        btnLogin.setVisibility(View.GONE);
+        btnRegister.setVisibility(View.GONE);
+        fragmentContainer.setVisibility(View.VISIBLE);
+    }
+
+    private void showWelcomeScreen() {
+        ivLogo.setVisibility(View.VISIBLE);
+        tvTitle.setVisibility(View.VISIBLE);
+        btnLogin.setVisibility(View.VISIBLE);
+        btnRegister.setVisibility(View.VISIBLE);
+        fragmentContainer.setVisibility(View.GONE);
     }
 
     private void showFragment(Fragment fragment) {
@@ -52,6 +107,16 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.fragment_container, fragment)
                 .commit();
     }
+
+    @Override
+    public void onBackPressed() {
+        if (fragmentContainer.getVisibility() == View.VISIBLE) {
+            showWelcomeScreen();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
     private void fetchPet(String uid) {
         FirebaseFirestore.getInstance()
                 .collection("pets")

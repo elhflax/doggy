@@ -66,12 +66,33 @@
             String username = usernameInput.getText().toString().trim();
             String password = passwordInput.getText().toString().trim();
             int selectedDogId = dogSelectionGroup.getCheckedRadioButtonId();
-            RadioButton selectedRadioButton = dogSelectionGroup.findViewById(selectedDogId);
-            String dogType = selectedRadioButton.getTag().toString();;
-            if (petName.isEmpty() || username.isEmpty() || password.isEmpty() || selectedDogId == -1) {
-                Toast.makeText(getContext(), "Please fill all fields and select a pet", Toast.LENGTH_SHORT).show();
+
+            if (petName.isEmpty() || username.isEmpty() || password.isEmpty()) {
+                Toast.makeText(getContext(), "Please fill all fields", Toast.LENGTH_SHORT).show();
                 return;
             }
+
+            // Password validation
+            if (password.length() < 6) {
+                Toast.makeText(getContext(), "Password must be at least 6 characters long", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (selectedDogId == -1) {
+                Toast.makeText(getContext(), "Please select a pet type", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            RadioButton selectedRadioButton = dogSelectionGroup.findViewById(selectedDogId);
+            if (selectedRadioButton == null || selectedRadioButton.getTag() == null) {
+                Toast.makeText(getContext(), "Please select a valid pet type", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            String dogType = selectedRadioButton.getTag().toString();
+
+            // Show a loading message
+            Toast.makeText(getContext(), "Creating account...", Toast.LENGTH_SHORT).show();
 
             db.collection("users")
                 .whereEqualTo("username", username)

@@ -1502,6 +1502,7 @@ int color foreground_material_dark 0x7f05006c
 int color foreground_material_light 0x7f05006d
 int color highlighted_text_material_dark 0x7f05006e
 int color highlighted_text_material_light 0x7f05006f
+int color ic_launcher_background 0x7f050320
 int color m3_appbar_overlay_color 0x7f050070
 int color m3_assist_chip_icon_tint_color 0x7f050071
 int color m3_assist_chip_stroke_color 0x7f050072
@@ -3473,6 +3474,8 @@ int id browser_actions_menu_item_icon 0x7f08006d
 int id browser_actions_menu_item_text 0x7f08006e
 int id browser_actions_menu_items 0x7f08006f
 int id browser_actions_menu_view 0x7f080070
+int id btnLogin 0x7f080246
+int id btnRegister 0x7f080247
 int id buttonPanel 0x7f080071
 int id buttons_container 0x7f080072
 int id cache_measures 0x7f080073
@@ -3641,6 +3644,7 @@ int id invisible 0x7f080115
 int id inward 0x7f080116
 int id italic 0x7f080117
 int id item_touch_helper_previous_elevation 0x7f080118
+int id ivLogo 0x7f080248
 int id jumpToEnd 0x7f080119
 int id jumpToStart 0x7f08011a
 int id kitchen_dog 0x7f08011b
@@ -3915,6 +3919,7 @@ int id transition_position 0x7f080227
 int id transition_scene_layoutid_cache 0x7f080228
 int id transition_transform 0x7f080229
 int id triangle 0x7f08022a
+int id tvTitle 0x7f080249
 int id unchecked 0x7f08022b
 int id uniform 0x7f08022c
 int id unlabeled 0x7f08022d
@@ -4148,6 +4153,7 @@ int layout select_dialog_multichoice_material 0x7f0b0072
 int layout select_dialog_singlechoice_material 0x7f0b0073
 int layout support_simple_spinner_dropdown_item 0x7f0b0074
 int mipmap ic_launcher 0x7f0d0000
+int mipmap ic_launcher_foreground 0x7f0d0002
 int mipmap ic_launcher_round 0x7f0d0001
 int navigation nav_graph 0x7f0e0000
 int plurals mtrl_badge_content_description 0x7f0f0000

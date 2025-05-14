@@ -16,9 +16,9 @@
         android:id="@+id/play_games_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play Games"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="#4CAF50"/>
+        android:backgroundTint="#415337"
+        android:text="Play Games" />
 
 </FrameLayout>

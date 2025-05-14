@@ -3,13 +3,6 @@ package com.hananfinal2;
 import java.io.Serializable;
 
 public class Pet implements Serializable {
-    private static final int MAX_HUNGER = 100;
-    private static final int MAX_HAPPINESS = 100;
-    private static final int MAX_ENERGY = 100;
-
-    private static final int MIN_HUNGER = 0;
-    private static final int MIN_HAPPINESS = 0;
-    private static final int MIN_ENERGY = 0;
 
     private float hunger;
     private float happiness;
@@ -28,25 +21,25 @@ public class Pet implements Serializable {
     }
 
     public void decrement() {
-        if (hunger > MIN_HUNGER) hunger -= 0.05;
-        if (happiness > MIN_HAPPINESS) happiness -= 0.1;
-        if (energy > MIN_ENERGY) energy -= 0.01;
-        else energy = MIN_ENERGY;
+        if (hunger > 0.04) hunger -= 0.05;
+        if (happiness > 0.09) happiness -= 0.1;
+        if (energy > 0) energy -= 0.01;
+        else energy = 0;
     }
 
     public void feed(float num) {
-        if (hunger < MAX_HUNGER - num) hunger += num;
-        else hunger = MAX_HUNGER;
+        if (hunger < 100 - num) hunger += num;
+        else hunger = 100;
     }
 
     public void play(float num) {
-        if (happiness < MAX_HAPPINESS - num) happiness += num;
-        else happiness = MAX_HAPPINESS;
+        if (happiness < 100 - num) happiness += num;
+        else happiness = 100;
     }
 
     public void sleep(float num) {
-        if (energy < MAX_ENERGY - num) energy += num;
-        else energy = MAX_ENERGY;
+        if (energy < 100 - num) energy += num;
+        else energy = 100;
     }
 
     // Getters
