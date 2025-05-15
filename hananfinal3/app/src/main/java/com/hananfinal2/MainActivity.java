@@ -41,14 +41,13 @@ public class MainActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         auth = FirebaseAuth.getInstance();
 
-        // Initialize views
         fragmentContainer = findViewById(R.id.fragment_container);
         btnLogin = findViewById(R.id.btnLogin);
         btnRegister = findViewById(R.id.btnRegister);
         ivLogo = findViewById(R.id.ivLogo);
         tvTitle = findViewById(R.id.tvTitle);
 
-        // Set click listeners
+
         btnLogin.setOnClickListener(v -> {
             hideWelcomeScreen();
             showFragment(new LoginFragment());
@@ -79,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // Check if user is already logged in
         if (auth.getCurrentUser() != null) {
             hideWelcomeScreen();
             fetchPet(auth.getCurrentUser().getUid());

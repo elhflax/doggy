@@ -28,7 +28,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 public class KitchenFragment extends Fragment {
-    private float dX, dY;
     private float originalX, originalY;
     private FrameLayout rootLayout;
     protected Pet pet;
